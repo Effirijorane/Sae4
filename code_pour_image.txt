@@ -1,0 +1,9 @@
+Images (à mettre dans le body)
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+<style>
+        body {
+            background-image: url('/img/fond.jpg');
+            backgroundckground-size:cover;
+            backdrop-filter: blur(5px);           
+        }
+</style>
