@@ -3,5 +3,82 @@
 {% block title %}{% endblock %}
 
 {% block body %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Loisirs</title>
+    <style>
+    
+        body {
+            font-family: <link rel="stylesheet" href=Arial black 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="texte">Bienvenue sur Ma Page de Loisirs</h1>
+</header>
+
+<section>
+    <div>
+        <h2>Sport</h2>
+        <p >Je suis passionné par le <strong>football</strong>. J'aime jouer avec des amis le week-end et suivre les grands tournois à la télévision.</p>
+    </div>
+
+    <div>
+        <h2>patisserie</h2>
+        <p>En dehors du sport, j'apprécie également la <strong> la patisserie</strong>. Mes genres préférés sont le rock et la pop.</p>
+    </div>
+
+    <div>
+        <h2>Voyages</h2>
+        <p>Explorer de nouveaux endroits est l'un de mes loisirs préférés. J'ai eu la chance de visiter plusieurs pays et découvrir différentes cultures.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 MonSiteWeb.com | Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
 
 {% endblock %}

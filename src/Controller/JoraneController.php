@@ -39,5 +39,12 @@ class JoraneController extends AbstractController
             'controller_name' => 'JoraneController',
         ]);
     }
+    #[Route('/Form', name: 'Form')]
+    public function Form(): Response
+    {
+        return $this->render('jorane/Form.html.twig', [
+            'controller_name' => 'JoraneController',
+        ]);
+    }
 }
     
