@@ -8,78 +8,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Loisirs</title>
+    <title>Page de Loisirs</title>
     <style>
-    
         body {
-            font-family: <link rel="stylesheet" href=Arial black 
+            background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Dégradé de rose pour l'arrière-plan */
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background 0.5s ease-in-out; /* Effet de transition pour l'arrière-plan */
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
+            background-color: #ec407a;
+            padding: 20px;
             text-align: center;
+            color: #fff;
         }
 
         section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            margin: 20px;
         }
 
-        h2 {
-            color: #333;
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
 
-        p {
-            color: #555;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
+        .image-container div {
+            flex: 0 0 calc(33.33% - 20px);
+            box-sizing: border-box;
+            margin: 10px;
             text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container div:hover {
+            transform: scale(1.05); /* Effet de zoom lorsqu'on survole la boîte */
+        }
+
+        .image-container img {
             width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid #ec407a;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container div:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-container p {
+            margin: 0;
+            font-style: italic;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(236, 64, 122, 0.8);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-container div:hover p {
+            opacity: 1;
         }
     </style>
-
 </head>
 <body>
 
-<header>
-    <h1 class="texte">Bienvenue sur Ma Page de Loisirs</h1>
-</header>
+    <header>
+        <h1>Loisirs</h1>
+    </header>
 
-<section>
-    <div>
-        <h2>Sport</h2>
-        <p >I am passionate about <strong>swimming</strong>. I like to swim with friends on trursdays and follow the big tournament on tv .</p>
-    </div>
+    <section>
+        <p>Explorez nos activités de loisirs passionnantes !</p>
 
-    <div>
-        <h2>pastry</h2>
-        <p>Apart from sports, I also enjoy <strong>pastry</strong>.</p>
-    </div>
-
-    <div>
-        <h2>Travel</h2>
-        <p>Exploring a new place is one of my favorite hobbies. I had the chance to visit several cities and discover different cultures .</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2024 MonSiteWeb.com | Tous droits réservés.</p>
-</footer>
+        <div class="image-container">
+            <div>
+                <img src="/img/jo2.jpg" alt="Loisir 1">
+                <p>>I am passionate about <strong>swimming</strong>. I like to swim with friends on trursdays and follow the big tournament on tv .</p>
+    
+            </div>
+            <div>
+                <img src="/img/jo3.jpg" alt="Loisir 2">
+                <p>Exploring a new place is one of my favorite hobbies. I had the chance to visit several cities and discover different cultures .</p>
+    
+            </div>
+            <div>
+                <img src="/img/jo4.jpg" alt="Loisir 3">
+                <p>Apart from sports, I also enjoy <strong>pastry</strong>.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
 
+
+
+
+
 {% endblock %}
+    
